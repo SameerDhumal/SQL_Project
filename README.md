@@ -93,7 +93,6 @@ below, “Type” is a derived column which tells whether the person is Supplier
 of customers that are from same country and city. Display firstname, lastname, city and
 coutntry of such customers.
 Hint See sample output for your reference.
-AnalytixLabs, Website: www.analytixlabs.co.in Email: info@analytixlabs.co.in phone: +91-88021-73069
 28. List all Suppliers and Customers. Give a Label in a separate column as 'Suppliers' if he is a
 supplier and 'Customer' if he is a customer accordingly. Also, do not display firstname and
 lastname as twoi fields; Display Full name of customer or supplier.
