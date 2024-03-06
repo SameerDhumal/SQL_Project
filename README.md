@@ -1,94 +1,78 @@
-Used advanced queries to extract important insights,improve data efficiency, and meet various business needs, including customer analysis, product management, order processing,
-and supplier coordination.
+Context:
+An e-commerce business want to analyzed customer behavior and sales trends .
 
+Objective: 
+Do exploratory analysis to see sales trend,customer behavior, to increase revenue and to understand potential areas for sales improvement.
 
-Set 1: Customer Table Analysis
-
-
-Set 2: Customer and Order Analysis
-
-
-Set 3: Supplier and Order Analysis
-
-
-Set 4: Join and Customer/Supplier Analysis
-
-
-
-
-
-
-
-
-
+Description: 
 ![dig](https://github.com/SameerDhumal/SQL_Project/assets/145559776/9c1b9cb7-8344-472b-9713-298a5f3ecf67)
 
-Below are question that we have solved using mssql
-Set 1:
-1. List all customers from Customer table.
-2. List the first name, last name, and city of all customers from customer table.
-3. List all customers who are from Sweden from the Customer table.
-4. Create a copy of Supplier table. Name the copy table as “Supplier_Copy”. Now, Update the city
-to ‘Sydney’ for supplier ‘Pavlova, Ltd.’ Do NOT perform update in the Supplier table
-5. Create a copy of Product table. Name the copy table as Product_Copy. Now,delete all products
-with unit price higher than $50 in this Product_Copy table. Do NOT perform update in the
-Product table
-6. List the number of customers in each country. Use Customer table.
-7. List the number of customers in each country sorted high to low. That is, Country with highest
-number of customers should come first in the list.
-Set 2:
-1. The Order table in the database gives the total amount for orders placed by each customer.
-Although this table has CutomerID, it does not have names of the customers. You have been
-told to return the CustomerID, FirstName, LastName and the total amount for orders placed by
-each customer. Use Join operation between Customer and Order tables to achieve this.
-2. List the number of customers in each country. Only include countries with more than 10
-customers. This is just an extension of Qn. 6 of Set 1.
-3. List the number of customers in each country, except the USA, sorted high to low.
-Only include countries with 9 or more customers.
-4. Write a single query to list all suppliers in the USA, Japan, and Germany ordered
-a. First by Country in ascending order
-b. Second by City within each of these Countries in Ascending order
-c. Third by Company Name in each of these cities in each countries in Descending order
-(Hint: Relax! This is simply a Hierarchical Sorting problem that we looked at in the class)
-5. You have found that Products with UnitPrice over 50$ are not selling much and hence it is
-resulting in loss costs. So you decide to discontinue those products. Write a query to
-Discontinue products over $50. Create a copy of Product table and Name it as Copy_Products.
-(Note: You are asked to discontinue the product, not delete the product all together from the
-table)
-6. List top 10 most expensive products. Use Product table.
-7. Get all but the 10 most expensive products sorted by price in descending order.
-8. Get the 10th to 15th most expensive products sorted by price in descending order.
-Set 3:
-1. You want to get a unique list of countries where there are Suppliers from the Supplier table.
-Write a query to get this unique list of countries.
-2. Find the largest order placed in 2014. That is you need to display the highest TotalAmount
-among orders placed by all customers in year 2014. Use Order table.
-3. List all products with names that start with 'Ca'. Use Product table.
-4. List all products that start with 'Cha' or 'Chan' and have one more character. Use Product table.
-5. List all suppliers that do have a fax number.
-6. In the previous question, you identified those suppliers have a fax number. In this question,
-make use of the ISNULL property to display the fax number if there is one otherwise label it as
-‘No fax Number’. Please see below sample output is as below for your reference
-Set 4:
-1. Let’s start with a simple join. You have been asked to write a query to display orderID,
-ProductName, Quantity and UnitPrice for each orderID. Use Product table and OrderItem table.
-2. Let us take previous question one step ahead. Now you may want to display orderNumber, date
-of order, ProductName, Quantity and UnitPrice for each orderID. Write a query to display this.
-Note that you have three tables: Order, OrderItem and Product. Write a query to display this.
-3. Your manager wants the names of customers, their city and country that have not placed any
-orders. This will help them to reach out to such customers and understand what challenges they
-might be facing for not ordering anything. Use Customer table and Order table.
-4. a. Let us start with finding all suppliers that have no customers in the country.
-b. Now let us find Customers that have no Supplier in the country.
-c. Now let us find customers and suppliers that are from the same country.
-5. Now tie all sub questions of Qn. 4 and come up with one query that does the same job (Hint:
-use one type of Join that gives the combined output of 4a, 4b and 4c)
-6. Now tie all sub questions of Qn. 4 and come up with a query using Set based operators to derive
-the combined output of 4a, 4b and 4c.
-7. Get a list of all Suppliers from Supplier table and Customers from Customer table. Label them as
-Suppliers and Customers accordingly. A sample output is shown below for reference. As seen
-below, “Type” is a derived column which tells whether the person is Supplier or Customer.
+ER diagram  (entity relationship) 
 
+The analysis was divided into four key sets:
+
+1) Customer Table Analysis: Examined customer data to understand their demographics, preferences, and behaviors.
+  
+2) Customer and Order Analysis: Analyzed the relationship between customers and their orders to identify patterns in purchasing behavior and sales trends.
+
+3) Supplier and Order Analysis: Investigated the interaction between suppliers and orders to assess supplier performance and its impact on sales.
+
+4) Join and Customer/Supplier Analysis: Integrated data from various sources to gain insights into the relationship between customers, suppliers, and orders, uncovering potential areas for improvement.
+
+Key findings and insights from the analysis include:
+City-Supplier Disparities: customers that dont have any suppliers in city 
+Underperforming Product Purchases: Customers buying product less that 10% of its average sales 
+Countries with Low Order Volumes: Top 5 countries with few orders 
+
+Output:
+helpd busnisss to understand where we are lacking and what measure can be taken to improve sales.
+
+Tools and technique used :
+select statements with clauses, aggregations, Joins, Subqueries, union , rank,  er diagram dml (manipulation) , ddl(definition) 
+
+
+
+
+
+Below are question that we have solved using mssql
+1. List all customers
+2. List the first name, last name, and city of all customers
+3. List the customers in Sweden. Remember it is "Sweden" and NOT "sweden" because filtering
+value is case sensitive in Redshift.
+4. Create a copy of Supplier table. Update the city to Sydney for supplier starting with letter P.
+5. Create a copy of Products table and Delete all products with unit price higher than $50.
+6. List the number of customers in each country
+7. List the number of customers in each country sorted high to low
+8. List the total amount for items ordered by each customer
+9. List the number of customers in each country. Only include countries with more than 10
+customers.
+10. List the number of customers in each country, except the USA, sorted high to low. Only
+include countries with 9 or more customers.
+11. List all customers whose first name or last name contains "ill".
+12. List all customers whose average of their total order amount is between $1000 and
+$1200.Limit your output to 5 results.
+13. List all suppliers in the 'USA', 'Japan', and 'Germany', ordered by country from A-Z, and then
+by company name in reverse order.
+14. Show all orders, sorted by total amount (the largest amount first), within each year.
+15. Products with UnitPrice greater than 50 are not selling despite promotions. You are asked to
+discontinue products over $25. Write a query to relfelct this. Do this in the copy of the Product
+table. DO NOT perform the update operation in the Product table.
+16. List top 10 most expensive products
+17. Get all but the 10 most expensive products sorted by price
+18. Get the 10th to 15th most expensive products sorted by price
+19. Write a query to get the number of supplier countries. Do not count duplicate values
+20. Find the total sales cost in each month of the year 2013.
+21. List all products with names that start with 'Ca'.
+22. List all products that start with 'Cha' or 'Chan' and have one more character.
+23. Your manager notices there are some suppliers without fax numbers. He seeks your help to
+get a list of suppliers with remark as "No fax number" for suppliers who do not have fax
+numbers (fax numbers might be null or blank).Also, Fax number should be displayed for
+customer with fax numbers.
+24. List all orders, their orderDates with product names, quantities, and prices.
+25. List all customers who have not placed any Orders.
+26. List suppliers that have no customers in their country, and customers that have no suppliers
+in their country, and customers and suppliers that are from the same country.
+Hint: See sample output for your reference.
 27. Match customers that are from the same city and country. That is you are asked to give a list
 of customers that are from same country and city. Display firstname, lastname, city and
 coutntry of such customers.
@@ -121,3 +105,16 @@ the low quantity order. Write a query to report such orderIDs.
 total order item amount for 1 order for a customer is calculated using the formula UnitPrice *
 Quantity * (1 - Discount). DO NOT consider the total amount column from 'Order' table to
 calculate the total orderItem for a customer.
+35. Display the top two customers, based on the total dollar amount associated with their
+orders, per country. The dollar amount is calculated as OI.unitprice * OI.Quantity * (1 -
+OI.Discount). You might want to perform a query like this so you can reward these customers,
+since they buy the most per country.
+Please note: if you receive the error message for this question "This type of correlated subquery
+pattern is not supported yet", that is totally fine.
+Sample output is as below for your response
+36. Create a View of Products whose unit price is above average Price.
+37. Write a store procedure that performs the following action:
+Check if Product_copy table (this is a copy of Product table) is present. If table exists, the
+procedure should drop this table first and recreated.
+Add a column Supplier_name in this copy table. Update this column with that of
+'CompanyName' column from Supplier tab
