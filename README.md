@@ -1,10 +1,10 @@
-Context:
+**Context**:
 An e-commerce business want to analyzed customer behavior and sales trends .
 
-Objective: 
+**Objective**: 
 Do exploratory analysis to see sales trend,customer behavior, to increase revenue and to understand potential areas for sales improvement.
 
-Description: 
+**Description**: 
 ![dig](https://github.com/SameerDhumal/SQL_Project/assets/145559776/9c1b9cb7-8344-472b-9713-298a5f3ecf67)
 
 ER diagram  (entity relationship) 
@@ -20,11 +20,14 @@ The analysis was divided into four key sets:
 4) Join and Customer/Supplier Analysis: Integrated data from various sources to gain insights into the relationship between customers, suppliers, and orders, uncovering potential areas for improvement.
 
 Key findings and insights from the analysis include:
+
 City-Supplier Disparities: customers that dont have any suppliers in city 
+
 Underperforming Product Purchases: Customers buying product less that 10% of its average sales 
+
 Countries with Low Order Volumes: Top 5 countries with few orders 
 
-Output:
+**Output**:
 helpd busnisss to understand where we are lacking and what measure can be taken to improve sales.
 
 Tools and technique used :
