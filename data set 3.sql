@@ -1,6 +1,4 @@
-
-
---3)
+--3) asdasdsdasd
 select  LastName , FirstName ,Country 
 from Customer
 where Country ='Sweden'
