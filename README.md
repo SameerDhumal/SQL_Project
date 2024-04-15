@@ -1,10 +1,63 @@
-**Context**:
-An e-commerce business want to analyzed customer behavior and sales trends .
+## table of content:
+- [Context](#context)
+- [Objective](#objective)
+- [Description](#description)
 
-**Objective**: 
+
+
+
+
+
+
+
+
+
+
+
+
+### Context
+An e-commerce business want to analyzed customer behavior and sales trends .
+sdwed
+sd
+
+d
+ds
+d
+sd
+sd
+
+dfd
+
+df
+
+
+df
+
+df
+dffdf
+
+
+
+
+
+s
+d
+s
+ds
+d
+s
+ds
+d
+sd
+s
+ds
+d
+sd
+
+### Objective
 Do exploratory analysis to see sales trend,customer behavior, to increase revenue and to understand potential areas for sales improvement.
 
-**Description**: 
+### Description 
 ![dig](https://github.com/SameerDhumal/SQL_Project/assets/145559776/9c1b9cb7-8344-472b-9713-298a5f3ecf67)
 
 ER diagram  (entity relationship) 
