@@ -22,13 +22,13 @@ Do exploratory analysis to see sales trend,customer behavior, to increase revenu
 
 The analysis was divided into four key sets:
 
-1) Customer Table Analysis: Examined customer data to understand their demographics, preferences, and behaviors.
+1) **Customer Table Analysis:** Examined customer data to understand their demographics, preferences, and behaviors.
   
-2) Customer and Order Analysis: Analyzed the relationship between customers and their orders to identify patterns in purchasing behavior and sales trends.
+2) **Customer and Order Analysis:** Analyzed the relationship between customers and their orders to identify patterns in purchasing behavior and sales trends.
 
-3) Supplier and Order Analysis: Investigated the interaction between suppliers and orders to assess supplier performance and its impact on sales.
+3) **Supplier and Order Analysis:** Investigated the interaction between suppliers and orders to assess supplier performance and its impact on sales.
 
-4) Join and Customer/Supplier Analysis: Integrated data from various sources to gain insights into the relationship between customers, suppliers, and orders, uncovering potential areas for improvement.
+4) **Join and Customer/Supplier Analysis:** Integrated data from various sources to gain insights into the relationship between customers, suppliers, and orders, uncovering potential areas for improvement.
 
 ### Key findings 
 
