@@ -1,4 +1,12 @@
---3) asdasdsdasd
+--1) List all customers
+select customer_id
+from Customer
+	
+--2) List the first name, last name, and city of all customers
+select distinct FirstName,LastName,City
+from Customert
+
+--3) List the customers in Sweden.
 select  LastName , FirstName ,Country 
 from Customer
 where Country ='Sweden'
@@ -57,12 +65,12 @@ select * from Product_copy
 delete from Product_copy
 where unitprice > 50
 
---6)
+--6) List the number of customers in each country
 select Country , COUNT(id) as count_
 from Customer
 group by Country
 
---7) 
+--7) . List the number of customers in each country sorted high to low
 select Country , COUNT(id) as cnt
 from Customer
 group by Country
